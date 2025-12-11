@@ -100,6 +100,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     a:hover {{ text-decoration: underline; }}
     ul, ol {{ padding-left: 1.4em; margin: 4px 0 10px; }}
     li {{ margin: 2px 0 2px; }}
+    .toc { list-style: none; padding-left: 0; margin: 8px 0 16px; }
+    .toc li { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); margin: 6px 0; }
+    .toc a { display: block; }
+    .toc .title { font-size: 16px; font-weight: 600; }
+    .toc .file-name { font-size: 12px; color: var(--muted); }
     code {{
       font-family: SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.9em;
@@ -211,6 +216,44 @@ def convert_one_file(src: Path, dst_dir: Path) -> Path:
     return out_path
 
 
+def build_index_page(md_files: List[Path], dst_dir: Path) -> Path:
+    """生成带目录的首页 index.html，列出所有章节链接。"""
+    items = []
+    for src in md_files:
+        text = src.read_text(encoding="utf-8")
+        title = guess_title(text, default=src.stem)
+        href = f"{src.stem}.html"
+        items.append((src.name, title, href))
+
+    parts: list[str] = []
+    parts.append("<section>")
+    parts.append("<h2>目录</h2>")
+    parts.append("<ul class=\"toc\">")
+    for src_name, title, href in items:
+        parts.append(
+            "<li>"
+            f"<a href=\"{_html.escape(href)}\">"
+            f"<div class='title'>{_html.escape(title)}</div>"
+            f"<div class='file-name'>{_html.escape(src_name)}</div>"
+            "</a>"
+            "</li>"
+        )
+    parts.append("</ul>")
+    parts.append("</section>")
+
+    content = "\n".join(parts)
+    html = HTML_TEMPLATE.format(
+        title=_html.escape("网球自学指南"),
+        source_name=_html.escape("目录 index"),
+        content=content,
+    )
+
+    dst_dir.mkdir(parents=True, exist_ok=True)
+    out_path = dst_dir / "index.html"
+    out_path.write_text(html, encoding="utf-8")
+    return out_path
+
+
 def main(argv: list[str]) -> int:
     if _markdown is None:
         print("[提示] 未检测到 'markdown' 库，将使用简单文本模式。")
@@ -228,7 +271,11 @@ def main(argv: list[str]) -> int:
         rel = out.relative_to(BASE_DIR)
         print(f"- {path.name}  ->  {rel}")
 
-    print("完成！可以在 'docs' 文件夹中用浏览器或 GitHub Pages 打开这些 HTML 文件。")
+    index_path = build_index_page(md_files, OUTPUT_DIR)
+    rel_index = index_path.relative_to(BASE_DIR)
+    print(f"- 目录首页  ->  {rel_index}")
+
+    print("完成！可以在 'docs' 文件夹中用浏览器或 GitHub Pages 打开这些 HTML 文件（入口为 index.html）。")
     return 0
 
 
