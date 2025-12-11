@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>网球自学指南</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #1d9bf0;
+      --border: #e0e0e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #050505;
+        --fg: #f5f5f5;
+        --muted: #999999;
+        --accent: #4aa8ff;
+        --border: #333333;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, -system-ui, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12px 16px 40px;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      padding: 8px 0 10px;
+      margin: 0 0 8px;
+      background: linear-gradient(to bottom, var(--bg) 70%, color-mix(in srgb, var(--bg) 90%, transparent));
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 2px;
+    }
+    .file-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    main {
+      margin-top: 8px;
+    }
+    h2 { font-size: 20px; margin: 20px 0 6px; }
+    h3 { font-size: 18px; margin: 16px 0 4px; }
+    h4, h5, h6 { font-size: 16px; margin: 12px 0 4px; }
+    p { margin: 6px 0 10px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { padding-left: 1.4em; margin: 4px 0 10px; }
+    li { margin: 2px 0 2px; }
+    .toc { list-style: none; padding-left: 0; margin: 8px 0 16px; }
+    .toc li { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); margin: 6px 0; }
+    .toc a { display: block; }
+    .toc .title { font-size: 16px; font-weight: 600; }
+    .toc .file-name { font-size: 12px; color: var(--muted); }
+    code {
+      font-family: SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9em;
+      background: color-mix(in srgb, var(--bg) 85%, #888888);
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background: color-mix(in srgb, var(--bg) 92%, #777777);
+      padding: 8px 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    blockquote {
+      margin: 6px 0 10px;
+      padding: 4px 10px;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+      background: color-mix(in srgb, var(--bg) 96%, #777777);
+      border-radius: 0 8px 8px 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 16px 0;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 8px auto;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px;
+      font-size: 0.9em;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 4px 6px;
+      text-align: left;
+    }
+    th {
+      background: color-mix(in srgb, var(--bg) 92%, #777777);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>网球自学指南</h1>
+    <div class="file-meta">来自：目录 index</div>
+  </header>
+  <main>
+  <section>
+<h2>目录</h2>
+<ul class="toc">
+<li><a href="00-1-自学工具箱-录像与陪练.html"><div class='title'>00-1 自学工具箱：录像与打墙</div><div class='file-name'>00-1-自学工具箱-录像与陪练.md</div></a></li>
+<li><a href="00-网球基础概念-器材与术语.html"><div class='title'>00 网球基础概念：器材与术语</div><div class='file-name'>00-网球基础概念-器材与术语.md</div></a></li>
+<li><a href="01-握拍与准备姿势.html"><div class='title'>01 握拍与准备姿势</div><div class='file-name'>01-握拍与准备姿势.md</div></a></li>
+<li><a href="02-1-正手进阶-平击重炮.html"><div class='title'>02-1 正手进阶：平击重炮</div><div class='file-name'>02-1-正手进阶-平击重炮.md</div></a></li>
+<li><a href="02-正手-制造上旋与穿透力.html"><div class='title'>02 正手：制造上旋与穿透力</div><div class='file-name'>02-正手-制造上旋与穿透力.md</div></a></li>
+<li><a href="03-双反-结构与稳定性.html"><div class='title'>03 双反：结构与稳定性</div><div class='file-name'>03-双反-结构与稳定性.md</div></a></li>
+<li><a href="04-1-发球基础-动力链与平击.html"><div class='title'>04-1 发球基础：动力链与平击 (The Flat Serve)</div><div class='file-name'>04-1-发球基础-动力链与平击.md</div></a></li>
+<li><a href="04-2-发球进阶-侧旋发球.html"><div class='title'>04-2 发球进阶：侧旋发球 (The Slice Serve)</div><div class='file-name'>04-2-发球进阶-侧旋发球.md</div></a></li>
+<li><a href="04-3-发球高阶-上旋发球.html"><div class='title'>04-3 发球高阶：上旋发球 (The Kick Serve)</div><div class='file-name'>04-3-发球高阶-上旋发球.md</div></a></li>
+<li><a href="04-发球-动力链与稳定性.html"><div class='title'>04 发球：动力链与稳定性 (Serve: Kinetic Chain &amp; Stability)</div><div class='file-name'>04-发球-动力链与稳定性.md</div></a></li>
+<li><a href="05-变奏技术-反手切削.html"><div class='title'>05 变奏技术：反手切削</div><div class='file-name'>05-变奏技术-反手切削.md</div></a></li>
+<li><a href="06-网前统治-截击技术.html"><div class='title'>06 网前统治：截击技术</div><div class='file-name'>06-网前统治-截击技术.md</div></a></li>
+<li><a href="07-网前统治-高压扣杀.html"><div class='title'>07 网前统治：高压扣杀</div><div class='file-name'>07-网前统治-高压扣杀.md</div></a></li>
+<li><a href="08-战术牵制-放小球与挑高球.html"><div class='title'>08 战术牵制：放小球与挑高球</div><div class='file-name'>08-战术牵制-放小球与挑高球.md</div></a></li>
+<li><a href="09-接发球-防守与反击.html"><div class='title'>09 接发球：防守与反击</div><div class='file-name'>09-接发球-防守与反击.md</div></a></li>
+<li><a href="10-单打战术-基本球路.html"><div class='title'>10 单打战术：基本球路与高胜率模式</div><div class='file-name'>10-单打战术-基本球路.md</div></a></li>
+<li><a href="10-比赛策略-百分比网球.html"><div class='title'>10 比赛策略：百分比网球 (Percentage Tennis)</div><div class='file-name'>10-比赛策略-百分比网球.md</div></a></li>
+<li><a href="96-附录-随身速查卡.html"><div class='title'>96 附录-随身速查卡 (Pocket Cards)</div><div class='file-name'>96-附录-随身速查卡.md</div></a></li>
+<li><a href="97-附录-伤病预防与装备建议.html"><div class='title'>97 附录：伤病预防与装备建议</div><div class='file-name'>97-附录-伤病预防与装备建议.md</div></a></li>
+<li><a href="98-附录-常见术语速查.html"><div class='title'>98 附录：常见术语速查</div><div class='file-name'>98-附录-常见术语速查.md</div></a></li>
+<li><a href="99-附录-常见疑难杂症速查.html"><div class='title'>99 附录：常见疑难杂症速查</div><div class='file-name'>99-附录-常见疑难杂症速查.md</div></a></li>
+</ul>
+</section>
+  </main>
+</body>
+</html>

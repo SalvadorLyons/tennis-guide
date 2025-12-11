@@ -100,11 +100,11 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     a:hover {{ text-decoration: underline; }}
     ul, ol {{ padding-left: 1.4em; margin: 4px 0 10px; }}
     li {{ margin: 2px 0 2px; }}
-    .toc { list-style: none; padding-left: 0; margin: 8px 0 16px; }
-    .toc li { padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); margin: 6px 0; }
-    .toc a { display: block; }
-    .toc .title { font-size: 16px; font-weight: 600; }
-    .toc .file-name { font-size: 12px; color: var(--muted); }
+    .toc {{ list-style: none; padding-left: 0; margin: 8px 0 16px; }}
+    .toc li {{ padding: 8px 10px; border-radius: 10px; border: 1px solid var(--border); margin: 6px 0; }}
+    .toc a {{ display: block; }}
+    .toc .title {{ font-size: 16px; font-weight: 600; }}
+    .toc .file-name {{ font-size: 12px; color: var(--muted); }}
     code {{
       font-family: SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       font-size: 0.9em;
