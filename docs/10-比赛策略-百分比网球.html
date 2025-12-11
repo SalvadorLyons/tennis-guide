@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>10 比赛策略：百分比网球 (Percentage Tennis)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #1d9bf0;
+      --border: #e0e0e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #050505;
+        --fg: #f5f5f5;
+        --muted: #999999;
+        --accent: #4aa8ff;
+        --border: #333333;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, -system-ui, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12px 16px 40px;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      padding: 8px 0 10px;
+      margin: 0 0 8px;
+      background: linear-gradient(to bottom, var(--bg) 70%, color-mix(in srgb, var(--bg) 90%, transparent));
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 2px;
+    }
+    .file-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    main {
+      margin-top: 8px;
+    }
+    h2 { font-size: 20px; margin: 20px 0 6px; }
+    h3 { font-size: 18px; margin: 16px 0 4px; }
+    h4, h5, h6 { font-size: 16px; margin: 12px 0 4px; }
+    p { margin: 6px 0 10px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { padding-left: 1.4em; margin: 4px 0 10px; }
+    li { margin: 2px 0 2px; }
+    code {
+      font-family: SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9em;
+      background: color-mix(in srgb, var(--bg) 85%, #888888);
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background: color-mix(in srgb, var(--bg) 92%, #777777);
+      padding: 8px 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    blockquote {
+      margin: 6px 0 10px;
+      padding: 4px 10px;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+      background: color-mix(in srgb, var(--bg) 96%, #777777);
+      border-radius: 0 8px 8px 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 16px 0;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 8px auto;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px;
+      font-size: 0.9em;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 4px 6px;
+      text-align: left;
+    }
+    th {
+      background: color-mix(in srgb, var(--bg) 92%, #777777);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>10 比赛策略：百分比网球 (Percentage Tennis)</h1>
+    <div class="file-meta">来自：10-比赛策略-百分比网球.md</div>
+  </header>
+  <main>
+  <h1>10 比赛策略：百分比网球 (Percentage Tennis)</h1>
+<h2>核心目标</h2>
+<p><strong>赢球不是因为你打出了制胜分，而是因为对手先失误了。</strong>
+在 NTRP 3.5-4.0 级别，<strong>非受迫性失误 (Unforced Errors)</strong> 决定比赛胜负。学会算概率，做球场上的“数学家”。</p>
+<hr>
+<h2>一、视觉预载（视频搜索指南）</h2>
+<p><strong>执行时间：</strong> 任何时候。
+<strong>核心原则：</strong> 理解“非受迫性失误”和“区域选择”。</p>
+<h3>1. 视频与图片直达 (点击即看)</h3>
+<ul>
+<li><strong>视频教程</strong>：<ul>
+<li><a href="https://search.bilibili.com/all?keyword=网球+百分比打法">📺 B站搜索：网球 百分比打法</a></li>
+<li><a href="https://www.youtube.com/results?search_query=high+percentage+tennis+strategy">📺 YouTube: High Percentage Tennis Strategy</a></li>
+<li><a href="https://search.bilibili.com/all?keyword=网球+减少非受迫性失误">📺 B站搜索：网球 减少非受迫性失误</a></li>
+</ul>
+</li>
+<li><strong>图表分析</strong>：<ul>
+<li><a href="https://www.google.com/search?tbm=isch&amp;q=tennis+court+zones+traffic+light+system">🖼️ Google图搜：网球球场区域划分 (Tennis Court Zones Traffic Light)</a></li>
+<li><a href="https://www.google.com/search?tbm=isch&amp;q=tennis+match+statistics+unforced+errors">🖼️ Google图搜：网球失误分布图 (Tennis Error Distribution)</a></li>
+</ul>
+</li>
+</ul>
+<h3>2. 视觉重点</h3>
+<ul>
+<li><strong>红绿灯区域</strong>：看教练如何把球场划分为红（防守）、黄（相持）、绿（进攻）三个区域。</li>
+<li><strong>多拍相持</strong>：观察哪怕是顶级球员，在黄区时也是互相切磋（推深球），很少有人一拍抡死。</li>
+</ul>
+<h2>0.5、决策训练 (Decision Training)</h2>
+<p><strong>执行时间：</strong> 看比赛直播时。
+<strong>核心原则：</strong> 练习“红绿灯”判断。</p>
+<h3>1. 喊颜色 (Call the Color)</h3>
+<ul>
+<li><strong>动作</strong>：看比赛视频。</li>
+<li><strong>任务</strong>：随着球的落点，大声喊出击球球员所处的区域颜色。<ul>
+<li>球员在底线后被动跑动 -&gt; <strong>“红！”</strong> -&gt; 预测他会回高球/斜线。</li>
+<li>球员在底线站定对拉 -&gt; <strong>“黄！”</strong> -&gt; 预测他会回深球。</li>
+<li>球员进场进攻 -&gt; <strong>“绿！”</strong> -&gt; 预测他会打直线/制胜分。</li>
+</ul>
+</li>
+<li><strong>目的</strong>：让你在自己打球时，脑子里也有这个红绿灯系统。</li>
+</ul>
+<hr>
+<h2>一、十字象限法则 (The Cross-Court Law)</h2>
+<p>根据你所处的位置和状态，决定你的打法风险。</p>
+<h3>🔴 红区 (Defensive Zone)</h3>
+<ul>
+<li><strong>位置</strong>：底线后2米以外，或者正在奔跑救球。</li>
+<li><strong>状态</strong>：被动、失位。</li>
+<li><strong>策略</strong>：<strong>生存模式</strong>。<ul>
+<li><strong>目标</strong>：把球回深，回高（使用上旋或切削）。</li>
+<li><strong>线路</strong>：<strong>只打中间</strong>或<strong>大斜线</strong>。绝对不要瞄准边线。</li>
+<li><strong>心态</strong>：“这一分我只要不失误就是赚。”</li>
+</ul>
+</li>
+</ul>
+<h3>🟡 黄区 (Neutral Zone)</h3>
+<ul>
+<li><strong>位置</strong>：底线附近。</li>
+<li><strong>状态</strong>：双方对拉，相持阶段。</li>
+<li><strong>策略</strong>：<strong>寻找机会</strong>。<ul>
+<li><strong>目标</strong>：保持深度，调动对手。</li>
+<li><strong>线路</strong>：80%斜线，20%直线（如果对手跑偏了）。</li>
+<li><strong>心态</strong>：耐心，等待对手出浅球。</li>
+</ul>
+</li>
+</ul>
+<h3>🟢 绿区 (Offensive Zone)</h3>
+<ul>
+<li><strong>位置</strong>：底线内（发球线与底线之间）。</li>
+<li><strong>状态</strong>：对手回球浅了，你迎前进攻。</li>
+<li><strong>策略</strong>：<strong>终结模式</strong>。<ul>
+<li><strong>目标</strong>：制胜分或随球上网。</li>
+<li><strong>线路</strong>：打对手空档（Open Court）或追身。</li>
+<li><strong>心态</strong>：果断出手，不要犹豫。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>三、接发球策略 (Return Strategy)</h2>
+<ul>
+<li><strong>一发怎么接</strong>：<strong>中间深区</strong>。不要想打死，挡回去就是胜利。</li>
+<li><strong>二发怎么接</strong>：<strong>攻击反手</strong>。二发通常较软，侧身用正手攻对手的反手位，然后上网压迫。</li>
+</ul>
+<hr>
+<h2>四、关键分思维 (Big Points)</h2>
+<p><strong>30-30, 40-40 (Deuce), 赛点</strong></p>
+<ul>
+<li><strong>策略</strong>：<strong>回归基本功</strong>。<ul>
+<li>不要在关键分尝试你平时只有30%成功率的“神仙球”。</li>
+<li>发球：发你最稳的那个点（哪怕慢一点）。</li>
+<li>接发：打斜线深区。</li>
+<li><strong>让对手去冒险，让对手去失误。</strong></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>五、心态管理 (Mental Reset)</h2>
+<ul>
+<li><strong>10秒法则</strong>：上一分打丢了，你有10秒钟时间生气、懊恼。10秒后（准备发球/接发时），必须<strong>清零</strong>。</li>
+<li><strong>不要连续犯错</strong>：如果你刚才打直线出界了，下一拍请务必打斜线安全球。<strong>不要试图立刻弥补刚才的错误</strong>，那通常会导致连丢两分。</li>
+</ul>
+<hr>
+<h2>六、伙伴检查清单 (Partner Check)</h2>
+<p><strong>让你的伙伴充当“风险控制官”：</strong></p>
+<ol>
+<li><strong>红区胡打</strong>：<ul>
+<li>"红区冒险！"（当你被挤出场外（红区），却试图打一个大力制胜分，伙伴要扣你分。这时候只能打高球防守）</li>
+</ul>
+</li>
+<li><strong>过网高度</strong>：<ul>
+<li>"太低了！"（如果你总是贴着网带击球，说明你在冒险。伙伴应提醒你“高过网”，留出安全余量）</li>
+</ul>
+</li>
+<li><strong>情绪管理</strong>：<ul>
+<li>"还在想上一分？"（如果你在丢分后一脸懊恼，下一分又接着失误，伙伴应提醒你“清零”）</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>✅ 进阶标准</h2>
+<ul>
+<li>[ ] 被动防守时，能下意识地挑高球回中路深区，而不是强行抽边线。</li>
+<li>[ ] 比赛中80%的回球线路是斜线。</li>
+<li>[ ] 面对浅球（绿区）敢于进场击球，而不是站在底线等球落地。</li>
+<li>[ ] 关键分不双误，不直接接发失误。</li>
+</ul>
+  </main>
+</body>
+</html>

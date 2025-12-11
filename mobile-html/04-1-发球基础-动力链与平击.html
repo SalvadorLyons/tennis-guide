@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>04-1 发球基础：动力链与平击 (The Flat Serve)</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #1d9bf0;
+      --border: #e0e0e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #050505;
+        --fg: #f5f5f5;
+        --muted: #999999;
+        --accent: #4aa8ff;
+        --border: #333333;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, -system-ui, sans-serif;
+      -webkit-text-size-adjust: 100%;
+    }
+    body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 12px 16px 40px;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      padding: 8px 0 10px;
+      margin: 0 0 8px;
+      background: linear-gradient(to bottom, var(--bg) 70%, color-mix(in srgb, var(--bg) 90%, transparent));
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0 0 2px;
+    }
+    .file-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+    main {
+      margin-top: 8px;
+    }
+    h2 { font-size: 20px; margin: 20px 0 6px; }
+    h3 { font-size: 18px; margin: 16px 0 4px; }
+    h4, h5, h6 { font-size: 16px; margin: 12px 0 4px; }
+    p { margin: 6px 0 10px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    ul, ol { padding-left: 1.4em; margin: 4px 0 10px; }
+    li { margin: 2px 0 2px; }
+    code {
+      font-family: SFMono-Regular, ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.9em;
+      background: color-mix(in srgb, var(--bg) 85%, #888888);
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+    pre {
+      background: color-mix(in srgb, var(--bg) 92%, #777777);
+      padding: 8px 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9em;
+      line-height: 1.5;
+    }
+    pre code {
+      background: none;
+      padding: 0;
+    }
+    blockquote {
+      margin: 6px 0 10px;
+      padding: 4px 10px;
+      border-left: 3px solid var(--accent);
+      color: var(--muted);
+      background: color-mix(in srgb, var(--bg) 96%, #777777);
+      border-radius: 0 8px 8px 0;
+    }
+    hr {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 16px 0;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+      margin: 8px auto;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 8px 0 12px;
+      font-size: 0.9em;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 4px 6px;
+      text-align: left;
+    }
+    th {
+      background: color-mix(in srgb, var(--bg) 92%, #777777);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>04-1 发球基础：动力链与平击 (The Flat Serve)</h1>
+    <div class="file-meta">来自：04-1-发球基础-动力链与平击.md</div>
+  </header>
+  <main>
+  <h1>04-1 发球基础：动力链与平击 (The Flat Serve)</h1>
+<h2>核心目标</h2>
+<p>建立正确的发球动力链，掌握网球中最具攻击性的武器——平击发球。从“推球”进化为“鞭打”。
+<strong>注意：对于 3.5 目标，平击发球是“锦上添花”，不是“雪中送炭”。请在保证侧旋二发稳定后再重点打磨平击。</strong></p>
+<hr>
+<h2>零、视觉预载 (Visual Preload)</h2>
+<h3>1. 视频与图片直达 (点击即看)</h3>
+<ul>
+<li><strong>视频教程</strong>：<ul>
+<li><a href="https://search.bilibili.com/all?keyword=网球+平击发球+教学">📺 B站搜索：网球 平击发球 教学</a></li>
+<li><a href="https://www.youtube.com/results?search_query=atp+flat+serve+slow+motion+side+view">📺 YouTube: ATP Flat Serve Slow Motion</a></li>
+<li><a href="https://search.bilibili.com/all?keyword=网球+发球+内旋+练习">📺 B站搜索：网球 发球 内旋</a></li>
+</ul>
+</li>
+<li><strong>关键动作图解</strong>：<ul>
+<li><a href="https://www.google.com/search?tbm=isch&amp;q=tennis+flat+serve+toss+location+diagram">🖼️ Google图搜：平击发球抛球点 (Flat Serve Toss Location)</a></li>
+<li><a href="https://www.google.com/search?tbm=isch&amp;q=tennis+serve+pronation+forearm+rotation">🖼️ Google图搜：发球内旋前臂 (Serve Pronation Forearm)</a></li>
+</ul>
+</li>
+</ul>
+<h3>2. 视觉重点</h3>
+<ul>
+<li><strong>流畅度</strong>：观察球员如何利用腿部蹬地，力量像波浪一样传导到球拍。</li>
+<li><strong>最高点击球</strong>：手臂伸直，在身体的最高点接触球。</li>
+<li><strong>内旋 (Pronation)</strong>：击球瞬间前臂的快速翻转，这是速度的核心来源。</li>
+</ul>
+<h2>0.5、陆地模拟 (Dryland Training)</h2>
+<p><strong>执行时间：</strong> 任何时候。
+<strong>核心原则：</strong> 练习“投掷动作”和“内旋”。</p>
+<h3>1. 扔球/扔石头 (Throwing)</h3>
+<ul>
+<li><strong>动作</strong>：找个空旷地方，用力把网球（或石头）扔向远处高空。</li>
+<li><strong>重点</strong>：<ul>
+<li><strong>完全模仿发球动作</strong>：侧身、抬肘、搔背、用力甩臂。</li>
+<li><strong>内旋</strong>：扔出去的一瞬间，手掌是向外翻的（拇指向下）。如果不内旋，球扔不远。</li>
+</ul>
+</li>
+<li><strong>目的</strong>：如果你能扔得远，你的动力链就是通的。发球只是把手里的球换成了拍子。</li>
+</ul>
+<h3>2. 拍框切风 (Edge Cutting)</h3>
+<ul>
+<li><strong>动作</strong>：<ul>
+<li>大陆式握拍。</li>
+<li>慢慢做挥拍动作，用<strong>拍框</strong>对着前方切过去（像斧头劈柴）。</li>
+<li><strong>瞬间翻转</strong>：在假想的击球点（最高点），手腕突然内旋，让拍面转正“拍”在球上。</li>
+</ul>
+</li>
+<li><strong>目的</strong>：练习平击发球最后那一瞬间的“突变”。</li>
+</ul>
+<hr>
+<h2>一、握拍：基石 (The Grip)</h2>
+<p><strong>当 准备发球时</strong></p>
+<ul>
+<li><strong>执行动作</strong>：<strong>必须是大陆式握拍</strong>（2号面，像握锤子/菜刀）。</li>
+<li><strong>为什么要这么做</strong>：<ul>
+<li><strong>唯一的出路</strong>：如果你用正手握拍（3/4号面）发球，你只能“拍”球，无法进行内旋，也无法在未来学习旋转发球。</li>
+<li><strong>初期痛苦</strong>：刚开始会觉得手腕别扭，球乱飞，这是正常的。坚持住，这是通往高阶技术的必经之路。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>二、抛球：发球的DNA (The Toss)</h2>
+<p><strong>当 准备抛球时</strong></p>
+<ul>
+<li><strong>执行动作</strong>：<ul>
+<li><strong>直臂</strong>：手臂像一根僵硬的棍子，只用肩膀转动带动手臂。</li>
+<li><strong>平托</strong>：球放在手指根部，像端着一杯水，<strong>球出手时几乎没有旋转</strong>（死球）。</li>
+<li><strong>高度</strong>：击球点应在最高点或刚开始下落的一瞬间。</li>
+</ul>
+</li>
+<li><strong>平击发球的黄金位置</strong>：<ul>
+<li><strong>时钟点</strong>：<strong>1点钟方向</strong>。</li>
+<li><strong>前后位置</strong>：进入场地约30-50厘米。</li>
+<li><strong>理由</strong>：靠前的抛球迫使你身体重心压进场地，将体重转化为球速。</li>
+</ul>
+</li>
+</ul>
+<h3>⚠️ 铁律：抛不好不打</h3>
+<ul>
+<li>如果在练习平击时抛球偏离了1点钟方向（比如抛到了头后），<strong>请务必接住重来</strong>。</li>
+<li>强行打坏抛球是养成坏习惯的最快方式。</li>
+</ul>
+<hr>
+<h2>三、动力链分解 (The Chain)</h2>
+<h3>1. 奖杯姿势 (Trophy Pose)</h3>
+<ul>
+<li><strong>动作</strong>：抛球后，双膝微弯，左手高举指天，右手拉拍至脑后，身体像一张拉满的弓。</li>
+<li><strong>关键</strong>：<strong>左手不要急着放下来</strong>，它维持着你的高击球点和侧身姿态。</li>
+</ul>
+<h3>2. 搔背 (Racket Drop)</h3>
+<ul>
+<li><strong>动作</strong>：蹬地向上，身体开始转正，球拍在惯性作用下自然下垂到后背。</li>
+<li><strong>关键</strong>：<strong>不要自己用手去摸背</strong>，这是放松手腕后自然发生的鞭打前奏。</li>
+</ul>
+<h3>3. 击球与内旋 (Contact &amp; Pronation)</h3>
+<ul>
+<li><strong>动作</strong>：<ul>
+<li>身体向上向前伸展。</li>
+<li>在最高点击球。</li>
+<li><strong>内旋</strong>：击球瞬间，前臂向外翻转（拇指向下），拍面从侧面切向正面，平击球的后部。</li>
+</ul>
+</li>
+<li><strong>为什么要这么做</strong>：内旋是拍头速度的主要来源，也是保护肩膀的关键。</li>
+</ul>
+<hr>
+<h2>四、常见错误与修正</h2>
+<h3>1. 侍者托盘 (Waiter's Tray)</h3>
+<ul>
+<li><strong>错误</strong>：拍面朝天，像端盘子一样举着拍子。</li>
+<li><strong>修正</strong>：保持大陆式握拍，引拍时拍面朝下或侧面，不要朝天。</li>
+</ul>
+<h3>2. 抛球太低/太后</h3>
+<ul>
+<li><strong>错误</strong>：球刚过头顶就打，或者抛在脑后。</li>
+<li><strong>修正</strong>：<strong>抛高一点</strong>，并确保球落在身体前方（1点钟方向），利用重心的力量。</li>
+</ul>
+<h3>3. 缺乏内旋</h3>
+<ul>
+<li><strong>错误</strong>：像羽毛球一样压腕，或者像推铅球一样推球。</li>
+<li><strong>修正</strong>：练习用拍框侧面去“砍”球，在击球瞬间翻转拍面。</li>
+</ul>
+<hr>
+<h2>五、反馈与调整 (Feedback)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">现象</th>
+<th style="text-align: left;">原因诊断</th>
+<th style="text-align: left;">调整方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>球下网</strong></td>
+<td style="text-align: left;">抛球太靠前（身体压太低） | 抛球太低</td>
+<td style="text-align: left;"><strong>向后收一点</strong>（但仍在头前） | <strong>抛高一点</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>球出界（长）</strong></td>
+<td style="text-align: left;">抛球太靠后（无法压腕） | 没内旋</td>
+<td style="text-align: left;"><strong>向前抛一点</strong>（进场） | <strong>加强扣腕</strong> (Snap)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>球速慢</strong></td>
+<td style="text-align: left;">手腕僵硬 | 没有蹬地</td>
+<td style="text-align: left;"><strong>放松手腕</strong>（像甩鞭子） | <strong>加强腿部驱动</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2>六、伙伴检查清单 (Partner Check)</h2>
+<p><strong>让你的伙伴站在侧后方，观察：</strong></p>
+<ol>
+<li><strong>奖杯姿势</strong>：<ul>
+<li>"左手掉太快！"（击球前左手必须保持高举，像要去抓天上的云）</li>
+</ul>
+</li>
+<li><strong>搔背</strong>：<ul>
+<li>"拍头没下去！"（引拍最深处，拍头应该指向地面，而不是指着后墙）</li>
+</ul>
+</li>
+<li><strong>击球瞬间</strong>：<ul>
+<li>"胳膊弯了！"（击球点太低，必须伸直手臂在最高点打）</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>✅ 进阶标准</h2>
+<ul>
+<li>[ ] 能够坚持使用大陆式握拍完成发球。</li>
+<li>[ ] 抛球稳定在1点钟方向，且无旋转。</li>
+<li>[ ] 击球时手臂伸直，击球点高。</li>
+<li>[ ] 击球后身体自然随挥进入场内。</li>
+</ul>
+  </main>
+</body>
+</html>
